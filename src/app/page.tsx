@@ -5,15 +5,15 @@ export default function Home() {
   return (
     <main className="relative min-h-screen text-vintage-text font-serif overflow-hidden selection:bg-seal-red selection:text-vintage-bg">
       
-      {/* علامة مائية سرية في الخلفية (Watermark) */}
+      {/* Background Watermark */}
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.03]">
         <span className="text-[10rem] md:text-[15rem] font-bold tracking-tighter rotate-[-30deg] uppercase text-center leading-none whitespace-nowrap">Top Secret</span>
       </div>
 
-      {/* تأثيرات لطشات الحبر والخدوش العشوائية - مدمجة في الخلفية تحت المحتوى */}
+      {/* Ink and Scratch Effects */}
       <div className="fixed inset-0 pointer-events-none z-0 opacity-40 mix-blend-multiply">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          {/* لطشات حبر عشوائية */}
+          {/* Random Ink Blots */}
           <circle cx="12%" cy="18%" r="8" fill="#2c1e16" filter="blur(1.5px)" opacity="0.9" />
           <circle cx="12.5%" cy="18.5%" r="3" fill="#2c1e16" opacity="0.95" />
           
@@ -25,7 +25,7 @@ export default function Home() {
           
           <circle cx="75%" cy="12%" r="5" fill="#2c1e16" filter="blur(0.5px)" opacity="0.7" />
 
-          {/* خطوط وخدوش عشوائية */}
+          {/* Random Scratches */}
           <path d="M 5vw 20vh Q 15vw 25vh 10vw 35vh" stroke="#2c1e16" strokeWidth="1.5" fill="none" opacity="0.6" />
           <path d="M 80vw 40vh Q 85vw 50vh 78vw 60vh" stroke="#2c1e16" strokeWidth="2" fill="none" opacity="0.5" />
           <path d="M 30vw 85vh Q 35vw 82vh 40vw 88vh" stroke="#2c1e16" strokeWidth="1" fill="none" opacity="0.7" />
@@ -33,10 +33,10 @@ export default function Home() {
         </svg>
       </div>
 
-      {/* --- قسم الهيرو (The Front Page) --- */}
+      {/* --- Hero Section --- */}
       <section className="relative w-full min-h-screen flex flex-col items-center justify-center pt-24 pb-12 z-10 border-b-4 border-double border-vintage-border">
         
-        {/* الترويسة بتفاصيل أكثر */}
+        {/* Header Details */}
         <div className="absolute top-4 w-[95%] border-y-2 border-vintage-border py-2 flex justify-between items-center text-xs md:text-sm uppercase tracking-widest font-mono">
           <span className="border-r border-vintage-border pr-4">Vol. I — No. 01</span>
           <span className="font-bold tracking-[0.4em] text-letterpress">The Moaz Archives</span>
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
 
         <div className="text-center max-w-4xl px-4 mt-8 relative z-10">
-          {/* خطوط تزيينية حول العنوان */}
+          {/* Decorative Lines */}
           <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-1 border-t-2 border-b-2 border-vintage-border"></div>
           
           <h1 
@@ -66,10 +66,10 @@ export default function Home() {
             <div className="w-12 h-[1px] bg-vintage-border"></div>
           </div>
 
-          {/* زراير التوجيه (Call to Actions) */}
+          {/* Call to Actions */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             
-            {/* زرار الأرشيف */}
+            {/* Archive Button */}
             <motion.button 
               onClick={() => document.getElementById('archives')?.scrollIntoView({ behavior: 'smooth' })}
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
@@ -80,7 +80,7 @@ export default function Home() {
               <div className="absolute -right-4 -bottom-4 opacity-20 w-16 h-16 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
             </motion.button>
 
-            {/* زرار التواصل */}
+            {/* Contact Button */}
             <motion.button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
@@ -93,14 +93,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- قسم أرشيف القضايا (Case Studies) --- */}
+      {/* --- Archives Section --- */}
       <section id="archives" className="relative w-full py-24 px-8 z-10 max-w-7xl mx-auto border-b-4 border-double border-vintage-border">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold uppercase tracking-[0.3em] text-letterpress inline-block border-b-2 border-vintage-border pb-4">The Archives</h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* قضية ناسا */}
+            {/* Case 1 */}
             <div className="p-10 border-2 border-vintage-border bg-[rgba(255,255,255,0.05)] backdrop-blur-sm shadow-[4px_4px_0px_var(--vintage-border)] relative group transition-transform hover:-translate-y-1">
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-seal-red rounded-full flex items-center justify-center text-[#e2d8b4] text-[10px] font-bold rotate-12 border-2 border-vintage-border shadow-md">SEALED</div>
               <p className="text-xs font-mono text-gray-500 mb-2 uppercase tracking-widest">Case No. 001</p>
@@ -114,7 +114,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* قضية AIEC */}
+            {/* Case 2 */}
             <div className="p-10 border-2 border-vintage-border bg-[rgba(255,255,255,0.05)] backdrop-blur-sm shadow-[4px_4px_0px_var(--vintage-border)] relative group transition-transform hover:-translate-y-1">
               <div className="absolute top-4 right-4 text-seal-red font-bold text-2xl opacity-50 group-hover:opacity-100 transition-opacity border-4 border-seal-red p-1 rotate-[-5deg]">CONFIDENTIAL</div>
               <p className="text-xs font-mono text-gray-500 mb-2 uppercase tracking-widest">Case No. 002</p>
@@ -127,7 +127,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* قضية التيك (سكوبي دو) */}
+            {/* Case 3 */}
             <div className="p-10 border-2 border-vintage-border bg-[rgba(255,255,255,0.05)] backdrop-blur-sm shadow-[4px_4px_0px_var(--vintage-border)] relative group transition-transform hover:-translate-y-1 md:col-span-2">
               <div className="absolute -top-4 left-4 w-20 h-8 bg-vintage-border flex items-center justify-center text-letterpress text-[10px] font-bold -rotate-3 border-2 border-dashed border-gray-600 shadow-sm">EVIDENCE</div>
               <p className="text-xs font-mono text-gray-500 mb-2 uppercase tracking-widest">Case No. 003</p>
@@ -141,7 +141,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* الفريلانس (الملفات السرية) */}
+            {/* Case 4 */}
             <div className="p-10 border-2 border-vintage-border bg-[rgba(255,255,255,0.05)] backdrop-blur-sm shadow-[4px_4px_0px_var(--vintage-border)] relative md:col-span-2">
               <h3 className="text-3xl font-bold mb-4 font-serif">The Classified Files</h3>
               <p className="mb-6 font-mono text-base leading-loose" dir="ltr">
@@ -151,16 +151,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- قسم الخبرات (Operational History / Service Record) --- */}
+      {/* --- Operational History Section --- */}
       <section className="relative w-full py-24 px-8 z-10 max-w-5xl mx-auto border-b-4 border-double border-vintage-border">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold uppercase tracking-[0.3em] text-letterpress inline-block border-b-2 border-vintage-border pb-4">Operational History</h2>
           <p className="mt-6 font-mono text-sm text-gray-700 tracking-wider">Declassified service records and field deployments.</p>
         </div>
         
-        {/* الخط الزمني (Timeline) */}
+        {/* Timeline */}
         <div className="relative border-l-2 border-dashed border-vintage-border ml-2 md:ml-8">
-          {/* المهمة الأولى */}
+          {/* Role 1 */}
           <div className="mb-12 pl-10 relative group">
             <div className="absolute -left-[9px] top-1.5 w-4 h-4 bg-vintage-bg border-2 border-vintage-border rounded-full group-hover:bg-seal-red group-hover:border-seal-red transition-all duration-300 shadow-[0_0_0_4px_transparent] group-hover:shadow-[0_0_0_4px_rgba(158,27,27,0.2)]"></div>
             
@@ -172,7 +172,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* المهمة الثانية */}
+          {/* Role 2 */}
           <div className="pl-10 relative group">
             <div className="absolute -left-[9px] top-1.5 w-4 h-4 bg-vintage-bg border-2 border-vintage-border rounded-full group-hover:bg-seal-red group-hover:border-seal-red transition-all duration-300 shadow-[0_0_0_4px_transparent] group-hover:shadow-[0_0_0_4px_rgba(158,27,27,0.2)]"></div>
             
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- قسم ما وراء الكواليس (Methodology) --- */}
+      {/* --- Methodology Section --- */}
       <section className="relative w-full py-24 px-8 z-10 max-w-4xl mx-auto border-b-4 border-double border-vintage-border text-center">
         <div className="inline-block p-2 border border-vintage-border mb-8 rotate-1">
           <h2 className="text-lg font-bold uppercase tracking-widest font-mono text-seal-red bg-[rgba(158,27,27,0.1)] px-4 py-2">Doc No. 3: Engineering Mindset</h2>
@@ -197,7 +197,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* --- قسم التواصل (Drop a Wire) --- */}
+      {/* --- Contact Section --- */}
       <section id="contact" className="relative w-full py-24 px-8 z-10 max-w-5xl mx-auto mb-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold uppercase tracking-[0.3em] text-letterpress inline-block border-b-2 border-vintage-border pb-4">Drop a Wire</h2>
@@ -205,15 +205,45 @@ export default function Home() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          {/* الفورم (The Cipher Form) */}
-          <form className="flex flex-col gap-8 font-mono bg-[rgba(255,255,255,0.05)] p-8 border-2 border-vintage-border shadow-[4px_4px_0px_var(--vintage-border)]">
+          {/* Form */}
+          <form 
+            action="https://formspree.io/f/xnjynvqr" 
+            method="POST" 
+            className="flex flex-col gap-8 font-mono bg-[rgba(255,255,255,0.05)] p-8 border-2 border-vintage-border shadow-[4px_4px_0px_var(--vintage-border)]"
+          >
             <div className="relative">
-              <input type="text" id="alias" placeholder=" " className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent border-0 border-b-2 border-vintage-border appearance-none focus:outline-none focus:ring-0 focus:border-seal-red peer" />
+              <input 
+                type="text" 
+                id="alias" 
+                name="name" 
+                required 
+                placeholder=" " 
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent border-0 border-b-2 border-vintage-border appearance-none focus:outline-none focus:ring-0 focus:border-seal-red peer" 
+              />
               <label htmlFor="alias" className="absolute text-sm text-gray-600 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-seal-red peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 uppercase tracking-widest">Name / Alias</label>
             </div>
             
             <div className="relative">
-              <textarea id="cipher" rows={4} placeholder=" " className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent border-0 border-b-2 border-vintage-border appearance-none focus:outline-none focus:ring-0 focus:border-seal-red peer resize-none"></textarea>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder=" " 
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent border-0 border-b-2 border-vintage-border appearance-none focus:outline-none focus:ring-0 focus:border-seal-red peer" 
+              />
+              <label htmlFor="email" className="absolute text-sm text-gray-600 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-seal-red peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 uppercase tracking-widest">Return Frequency (Email)</label>
+            </div>
+
+            <div className="relative">
+              <textarea 
+                id="cipher" 
+                name="message" 
+                rows={4} 
+                required 
+                placeholder=" " 
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm bg-transparent border-0 border-b-2 border-vintage-border appearance-none focus:outline-none focus:ring-0 focus:border-seal-red peer resize-none"
+              ></textarea>
               <label htmlFor="cipher" className="absolute text-sm text-gray-600 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-seal-red peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-6 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 left-1 uppercase tracking-widest">The Cipher (Message)</label>
             </div>
 
@@ -226,7 +256,7 @@ export default function Home() {
             </motion.button>
           </form>
 
-          {/* قنوات الاتصال المباشرة (Direct Frequencies) */}
+          {/* Direct Contact Channels */}
           <div className="flex flex-col justify-center gap-10 font-mono border-l-4 border-double border-vintage-border pl-10">
             <div className="relative group">
               <div className="absolute -left-[54px] top-1 w-6 h-6 bg-vintage-bg border-2 border-vintage-border rounded-full flex items-center justify-center group-hover:border-seal-red transition-colors">
@@ -255,7 +285,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* --- الفوتر (Footer) --- */}
+      {/* --- Footer --- */}
       <footer className="relative w-full py-6 border-t-2 border-vintage-border text-center z-10 bg-[rgba(0,0,0,0.02)]">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-gray-600">
           © {new Date().getFullYear()} The Moaz Archives. All operations classified.
