@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ألوان ورق البردي والحبر القديم */
+  --vintage-bg: #e2d8b4; /* لون ورق البردي */
+  --vintage-text: #2c1e16; /* حبر بني غامق جداً بدل الأسود الصريح */
+  --vintage-border: #5c4033; /* لون الإطارات (حبر متآكل) */
+  
+  /* ألوان الختم السري */
+  --seal-red: #9e1b1b;
+  --seal-dark: #5a0a0a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-vintage-bg: var(--vintage-bg);
+  --color-vintage-text: var(--vintage-text);
+  --color-vintage-border: var(--vintage-border);
+  --color-seal-red: var(--seal-red);
+  --color-seal-dark: var(--seal-dark);
+  
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+  --font-mono: "Courier New", Courier, monospace;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* حركة الظهور الناعمة للنصوص */
+  --animate-fade-in-up: fade-in-up 1s ease-out forwards;
+  
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--vintage-bg);
+  /* دمج ملمس البردي، الورق المكرمش، وتعتيم الحواف */
+  background-image: 
+    radial-gradient(circle at center, transparent 40%, rgba(44, 30, 22, 0.3) 120%),
+    url('https://www.transparenttextures.com/patterns/crumpled-paper.png'),
+    url('https://www.transparenttextures.com/patterns/parchment.png');
+  background-blend-mode: multiply;
+  color: var(--vintage-text);
+  font-family: var(--font-serif);
+}
+
+::selection {
+  background-color: var(--seal-red);
+  color: var(--vintage-bg);
+}
+
+/* كلاس مخصص للعناوين عشان تبان كأنها محفورة أو مطبوعة بضغط */
+.text-letterpress {
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3), -1px -1px 0px rgba(0, 0, 0, 0.2);
 }
