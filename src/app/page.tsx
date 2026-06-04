@@ -13,7 +13,7 @@ export default function Home() {
       {/* Ink and Scratch Effects */}
       <div className="fixed inset-0 pointer-events-none z-0 opacity-40 mix-blend-multiply">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          {/* Random Ink Blots */}
+          {/* Ink Blots */}
           <circle cx="12%" cy="18%" r="8" fill="#2c1e16" filter="blur(1.5px)" opacity="0.9" />
           <circle cx="12.5%" cy="18.5%" r="3" fill="#2c1e16" opacity="0.95" />
           
@@ -25,7 +25,7 @@ export default function Home() {
           
           <circle cx="75%" cy="12%" r="5" fill="#2c1e16" filter="blur(0.5px)" opacity="0.7" />
 
-          {/* Random Scratches */}
+          {/* Scratches */}
           <path d="M 5vw 20vh Q 15vw 25vh 10vw 35vh" stroke="#2c1e16" strokeWidth="1.5" fill="none" opacity="0.6" />
           <path d="M 80vw 40vh Q 85vw 50vh 78vw 60vh" stroke="#2c1e16" strokeWidth="2" fill="none" opacity="0.5" />
           <path d="M 30vw 85vh Q 35vw 82vh 40vw 88vh" stroke="#2c1e16" strokeWidth="1" fill="none" opacity="0.7" />
@@ -43,12 +43,33 @@ export default function Home() {
           <span className="border-l border-vintage-border pl-4 text-seal-red font-bold">Top Secret</span>
         </div>
 
-        <div className="text-center max-w-4xl px-4 mt-8 relative z-10">
+        <div className="text-center max-w-4xl px-4 mt-16 md:mt-8 relative z-10 flex flex-col items-center md:block">
           {/* Decorative Lines */}
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-1 border-t-2 border-b-2 border-vintage-border"></div>
+          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-1 border-t-2 border-b-2 border-vintage-border hidden md:block"></div>
           
+          {/* Subject Profile Image */}
+          <div className="relative md:absolute md:top-[60%] md:-translate-y-1/2 md:-left-12 lg:-left-32 flex flex-col items-start z-20 mb-8 md:mb-0 rotate-[-3deg] scale-90 md:scale-100 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+            <p className="font-mono text-[10px] md:text-xs text-vintage-text mb-1 tracking-widest font-bold">ARCHIVE ID: 111111111</p>
+            <div className="relative bg-[#e2d8b4] p-2 pb-6 md:pb-8 shadow-[4px_4px_15px_rgba(0,0,0,0.15)] border border-vintage-border">
+                {/* Masking Tape */}
+                <div className="absolute -top-3 -left-4 w-12 h-5 bg-[#c2b591] opacity-70 rotate-[-20deg] shadow-sm mix-blend-multiply"></div>
+                <div className="absolute -bottom-3 right-[-10px] w-12 h-5 bg-[#c2b591] opacity-70 rotate-[-15deg] shadow-sm mix-blend-multiply"></div>
+                
+                {/* Photo Wrapper */}
+                <div className="relative w-40 h-40 md:w-48 md:h-48 border border-vintage-border overflow-hidden sepia-[0.3] contrast-125 grayscale">
+                   {/* Ensure you place profile.jpg in the /public folder */}
+                   <img src="/profile.jpg" alt="Moaz Profile" className="w-full h-full object-cover" />
+                </div>
+                
+                {/* Stamps */}
+                <div className="absolute top-2 right-[-15px] border-2 border-seal-red text-seal-red text-[10px] md:text-xs font-bold px-1.5 py-0.5 rotate-[15deg] opacity-80 mix-blend-multiply tracking-widest">VERIFIED</div>
+                <div className="absolute bottom-6 md:bottom-8 right-[-5px] border-2 border-seal-red text-seal-red text-[10px] md:text-xs font-bold px-1.5 py-0.5 rotate-[-5deg] opacity-80 mix-blend-multiply tracking-widest">PROFILE</div>
+            </div>
+            <p className="font-mono text-[8px] md:text-[9px] text-vintage-text mt-2 tracking-widest text-left max-w-[180px] md:max-w-[200px] leading-tight uppercase">NAME: Moaz Hany <br/> PROFILED: {new Date().getFullYear()} | STATUS: ACTIVE</p>
+          </div>
+
           <h1 
-            className="text-5xl md:text-7xl font-bold leading-tight mb-8 text-letterpress animate-fade-in-up opacity-0"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-8 text-letterpress animate-fade-in-up opacity-0 relative z-10"
             dir="ltr"
             style={{ animationDelay: '0.2s' }}
           >
@@ -56,14 +77,14 @@ export default function Home() {
           </h1>
           
           <div className="flex items-center justify-center gap-4 mb-10 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-            <div className="w-12 h-[1px] bg-vintage-border"></div>
+            <div className="w-8 md:w-12 h-[1px] bg-vintage-border"></div>
             <p 
-              className="text-lg md:text-xl font-mono tracking-wide max-w-2xl text-center"
+              className="text-sm md:text-xl font-mono tracking-wide max-w-2xl text-center"
               dir="ltr"
             >
               Digital Vibe Architect: Where raw human connection links up with razor sharp data.
             </p>
-            <div className="w-12 h-[1px] bg-vintage-border"></div>
+            <div className="w-8 md:w-12 h-[1px] bg-vintage-border"></div>
           </div>
 
           {/* Call to Actions */}
