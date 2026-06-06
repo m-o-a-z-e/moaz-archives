@@ -53,7 +53,7 @@ export default function Home() {
           <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-1 border-t-2 border-b-2 border-vintage-border hidden md:block"></div>
           
           <div className="relative md:absolute md:top-[60%] md:-translate-y-1/2 md:-left-12 lg:-left-32 flex flex-col items-start z-20 mb-8 md:mb-0 rotate-[-3deg] scale-90 md:scale-100 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <p className="font-mono text-[10px] md:text-xs text-vintage-text mb-1 tracking-widest font-bold">ARCHIVE ID: SUBJECT PROFILE</p>
+            <p className="font-mono text-[10px] md:text-xs text-vintage-text mb-1 tracking-widest font-bold">ARCHIVE ID: 1111</p>
             <div className="relative bg-[#e2d8b4] p-2 pb-6 md:pb-8 shadow-[4px_4px_15px_rgba(0,0,0,0.15)] border border-vintage-border">
                 <div className="absolute -top-3 -left-4 w-12 h-5 bg-[#c2b591] opacity-70 rotate-[-20deg] shadow-sm mix-blend-multiply"></div>
                 <div className="absolute -bottom-3 right-[-10px] w-12 h-5 bg-[#c2b591] opacity-70 rotate-[-15deg] shadow-sm mix-blend-multiply"></div>
@@ -63,7 +63,7 @@ export default function Home() {
                 <div className="absolute top-2 right-[-15px] border-2 border-seal-red text-seal-red text-[10px] md:text-xs font-bold px-1.5 py-0.5 rotate-[15deg] opacity-80 mix-blend-multiply tracking-widest">VERIFIED</div>
                 <div className="absolute bottom-6 md:bottom-8 right-[-5px] border-2 border-seal-red text-seal-red text-[10px] md:text-xs font-bold px-1.5 py-0.5 rotate-[-5deg] opacity-80 mix-blend-multiply tracking-widest">PROFILE</div>
             </div>
-            <p className="font-mono text-[8px] md:text-[9px] text-vintage-text mt-2 tracking-widest text-left max-w-[180px] md:max-w-[200px] leading-tight uppercase">NAME: [GENERIC SUBJECT MOAZ] <br/> PROFILED: {new Date().getFullYear()} | STATUS: ACTIVE</p>
+            <p className="font-mono text-[8px] md:text-[9px] text-vintage-text mt-2 tracking-widest text-left max-w-[180px] md:max-w-[200px] leading-tight uppercase">NAME: Moaz Hany <br/> PROFILED: {new Date().getFullYear()} | STATUS: ACTIVE</p>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-8 text-letterpress animate-fade-in-up opacity-0 relative z-10" dir="ltr" style={{ animationDelay: '0.2s' }}>
